@@ -1,0 +1,18 @@
+@import '../../../../styles/colors';
+
+.header {
+  width: 100%;
+  background-color: $col-white;
+}
+
+.header__main {
+
+  &__title {
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  &__description {
+
+  }
+}

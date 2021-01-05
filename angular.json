@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/scss/bootstrap.scss"
             ],
             "scripts": []
           },
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "food-delivery"
+    }
+  },
+  "defaultProject": "food-delivery",
+  "cli": {
+    "analytics": "d21bdcbb-0b6f-4b62-8638-4622ead97fcc"
+  }
 }

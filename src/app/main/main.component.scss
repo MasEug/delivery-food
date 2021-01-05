@@ -1,0 +1,12 @@
+.wrapper {
+
+  &__box {
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-gap: 1.25rem;
+  }
+
+  .second-column {
+    margin-right: 1.25rem;
+  }
+}

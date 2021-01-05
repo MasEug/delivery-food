@@ -1,0 +1,42 @@
+<div class="sidebar">
+  <div class="sidebar__box">
+    <div class="sidebar__box-fixed">
+      <div class="sidebar__logo__box">
+        <a href="#">
+          <div class="sidebar__logo__icon"></div>
+        </a>
+      </div>
+
+      <div class="sidebar__menu" id="sidebar">
+        <ul class="menu" id="mainMenu">
+<!--          (click)="clickedIndex = item.id"-->
+          <li class="menu__category first-category" *ngFor="let item of menu" (mouseover)="hoveredIndex = item.id" (mouseleave)="hoveredIndex = null" >
+            <a href="#" class="menu__link"  >
+              <div class="menu__box" >
+                <div class="menu__box-fixed">
+                  <div class="menu__box-fixed__icon" [inlineSVG]="'assets/img/menu-main/' + item.nameSvg + '.svg'"></div>
+                </div>
+                <div class="menu__box__title">{{item.name}}</div>
+              </div>
+            </a>
+
+            <div class="second-menu" [id]="item.nameCategory" *ngIf="item.dishSub.length > 0" [ngClass]="{'active': clickedIndex == item.id || hoveredIndex === item.id}">
+              <ul class="menu menu-second-level">
+                <li class="menu__category" *ngFor="let subitem of item.dishSub">
+                  <a href="#" class="menu__link">
+                    <div class="menu__box second">
+                      <div class="menu__box-fixed">
+                        <div class="menu__box-fixed__icon" [inlineSVG]="'assets/img/submenu/' + subitem.nameSvg + '.svg'"></div>
+                      </div>
+                      <div class="menu__box__title">{{subitem.name}}</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
